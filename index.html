@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>For You ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     PASSWORD SCREEN
+===================================================== -->
+
+<section id="passwordScreen" class="screen active">
+
+    <div class="password-box">
+
+        <div class="lock">
+            🔐
+        </div>
+
+        <p class="section-label">
+            A LITTLE SURPRISE
+        </p>
+
+        <h1>
+            Something For You
+        </h1>
+
+        <p>
+            There is something special waiting
+            behind this little secret.
+        </p>
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Enter password"
+            autocomplete="off"
+        >
+
+        <button onclick="checkPassword()">
+            Unlock ❤️
+        </button>
+
+        <p id="wrongPassword"></p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WELCOME
+===================================================== -->
+
+<section id="welcomeScreen" class="screen">
+
+    <div class="welcome-content">
+
+        <div class="sparkle">
+            ✨
+        </div>
+
+        <p class="section-label">
+            THIS IS FOR YOU
+        </p>
+
+        <h1>
+            Happy Birthday
+            <span>❤️</span>
+        </h1>
+
+        <p class="welcome-text">
+
+            Today isn't about anything complicated.
+
+            <br>
+
+            It's just about you,
+            your beautiful moments,
+            and the memories I love.
+
+        </p>
+
+        <button onclick="showScreen('photoScreen')">
+
+            Begin ✨
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FIRST PHOTO
+===================================================== -->
+
+<section id="photoScreen" class="screen">
+
+    <div class="photo-stage">
+
+        <p class="section-label">
+            A MEMORY
+        </p>
+
+        <div class="main-photo">
+
+            <img
+                src="images/2.png"
+                alt="Memory"
+            >
+
+        </div>
+
+        <h2>
+            One beautiful moment
+        </h2>
+
+        <p>
+            Some moments become memories
+            without us even realizing it.
+        </p>
+
+        <button onclick="showScreen('wheelScreen')">
+
+            There's more ❤️
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SPINNER
+===================================================== -->
+
+<section id="wheelScreen" class="screen">
+
+    <div class="wheel-page">
+
+        <p class="section-label">
+            A LITTLE SURPRISE
+        </p>
+
+        <h1>
+            Spin & discover
+        </h1>
+
+        <p class="wheel-description">
+
+            Let's see what comes next...
+
+        </p>
+
+
+        <!-- WHEEL -->
+
+        <div class="wheel-wrapper">
+
+            <!-- POINTER -->
+
+            <div class="pointer">
+                ▼
+            </div>
+
+
+            <!-- ACTUAL WHEEL -->
+
+            <div
+                id="wheel"
+                class="wheel"
+            >
+
+
+                <!-- 1 -->
+
+                <div
+                    class="wheel-item"
+                    style="--angle: 0deg;"
+                >
+
+                    <div class="wheel-icon">
+                        🥻
+                    </div>
+
+                    <span>
+                        Sari
+                    </span>
+
+                </div>
+
+
+                <!-- 2 -->
+
+                <div
+                    class="wheel-item"
+                    style="--angle: 30deg;"
+                >
+
+                    <div class="wheel-icon">
+                        🎂
+                    </div>
+
+                    <span>
+                        Cake
+                    </span>
+
+                </div>
+
+
+                <!-- 3 -->
+
+                <div
+                    class="wheel-item"
+                    style="--angle: 60deg;"
+                >
+
+                    <div class="wheel-icon">
+                        🎈
+                    </div>
+
+                    <span>
+                        Balloon
+                    </span>
+
+                </div>
+
+
+                <!-- 4 -->
+
+                <div
+                    class="wheel-item"
+                    style="--angle: 90deg;"
+                >
+
+                    <div class="wheel-icon">
+                        🌸
+                    </div>
+
+                    <span>
+                        Flower
+                    </span>
+
+                </div>
+
+
+                <!-- 5 -->
+
+                <div
+                    class="wheel-item"
+                    style="--angle: 120deg;"
+                >
+
+                    <div class="wheel-icon">
+                        👗
+                    </div>
+
+                    <span>
+                        Dress
+                    </span>
+
+                </div>
+
+
+                <!-- 6 -->
+
+                <div
+                    class="wheel-item"
+                    style="--angle: 150deg;"
+                >
+
+                    <div class="wheel-icon">
+                        💎
+                    </div>
+
+                    <span>
+                        Jewelry
+                    </span>
+
+                </div>
+
+
+                <!-- 7 -->
+
+                <div
+                    class="wheel-item"
+                    style="--angle: 180deg;"
+                >
+
+                    <div class="wheel-icon">
+                        🌙
+                    </div>
+
+                    <span>
+                        Night
+                    </span>
+
+                </div>
+
+
+                <!-- 8 -->
+
+                <div
+                    class="wheel-item"
+                    style="--angle: 210deg;"
+                >
+
+                    <div class="wheel-icon">
+                        🌹
+                    </div>
+
+                    <span>
+                        Rose
+                    </span>
+
+                </div>
+
+
+                <!-- 9 -->
+
+                <div
+                    class="wheel-item"
+                    style="--angle: 240deg;"
+                >
+
+                    <div class="wheel-icon">
+                        🎁
+                    </div>
+
+                    <span>
+                        Gift
+                    </span>
+
+                </div>
+
+
+                <!-- 10 -->
+
+                <div
+                    class="wheel-item"
+                    style="--angle: 270deg;"
+                >
+
+                    <div class="wheel-icon">
+                        📸
+                    </div>
+
+                    <span>
+                        Memory
+                    </span>
+
+                </div>
+
+
+                <!-- 11 -->
+
+                <div
+                    class="wheel-item"
+                    style="--angle: 300deg;"
+                >
+
+                    <div class="wheel-icon">
+                        🎵
+                    </div>
+
+                    <span>
+                        Music
+                    </span>
+
+                </div>
+
+
+                <!-- 12 -->
+
+                <div
+                    class="wheel-item"
+                    style="--angle: 330deg;"
+                >
+
+                    <div class="wheel-icon">
+                        ❤️
+                    </div>
+
+                    <span>
+                        Love
+                    </span>
+
+                </div>
+
+
+                <!-- CENTER -->
+
+                <button
+                    id="spinButton"
+                    onclick="spinWheel()"
+                >
+
+                    SPIN
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <p id="wheelResult"></p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SARI RESULT
+===================================================== -->
+
+<section id="sariScreen" class="screen">
+
+    <div class="sari-container">
+
+        <div class="sari-photo">
+
+            <img
+                src="images/1.png"
+                alt="Sari"
+            >
+
+        </div>
+
+
+        <div class="sari-info">
+
+            <p class="section-label">
+                THE WHEEL CHOSE
+            </p>
+
+            <h1>
+                🥻 Sari
+            </h1>
+
+            <p>
+                And honestly...
+            </p>
+
+            <h2>
+                You look beautiful. ❤️
+            </h2>
+
+            <p class="sari-message">
+
+                Some pictures don't need
+                a special reason.
+
+                <br><br>
+
+                They're simply beautiful
+                because of the person in them.
+
+            </p>
+
+            <button
+                onclick="showScreen('videoScreen')"
+            >
+
+                Continue ✨
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     VIDEO SECTION
+===================================================== -->
+
+<section id="videoScreen" class="screen">
+
+    <div class="video-page">
+
+        <p class="section-label">
+            MORE MEMORIES
+        </p>
+
+        <h1>
+            Moments worth remembering 🎥
+        </h1>
+
+        <div class="video-box">
+
+            <video
+                id="memoryVideo"
+                controls
+                playsinline
+            >
+
+                <source
+                    src="videos/1.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support video.
+
+            </video>
+
+        </div>
+
+        <p>
+            A little memory, just for you.
+        </p>
+
+        <button onclick="nextVideo()">
+
+            Next Memory →
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PHOTO COLLECTION
+===================================================== -->
+
+<section id="photosScreen" class="screen">
+
+    <div class="collection">
+
+        <p class="section-label">
+            YOUR MOMENTS
+        </p>
+
+        <h1>
+            Little pieces of you ❤️
+        </h1>
+
+
+        <div class="photo-grid">
+
+            <div class="small-photo">
+                <img src="images/3.jpeg">
+            </div>
+
+            <div class="small-photo">
+                <img src="images/4.jpeg">
+            </div>
+
+            <div class="small-photo">
+                <img src="images/5.jpeg">
+            </div>
+
+            <div class="small-photo">
+                <img src="images/6.jpeg">
+            </div>
+
+        </div>
+
+
+        <button onclick="showScreen('favoriteScreen')">
+
+            One last thing ❤️
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FAVORITE
+===================================================== -->
+
+<section id="favoriteScreen" class="screen">
+
+    <div class="favorite">
+
+        <p class="section-label">
+            MY FAVORITE
+        </p>
+
+        <div class="favorite-photo">
+
+            <img
+                src="images/7.jpeg"
+                alt="Favorite"
+            >
+
+        </div>
+
+        <h1>
+            Simply you. ❤️
+        </h1>
+
+        <p>
+
+            No filters.
+            No words needed.
+
+            <br>
+
+            Just a beautiful memory.
+
+        </p>
+
+        <button onclick="showScreen('finalScreen')">
+
+            Open your surprise 💌
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL
+===================================================== -->
+
+<section id="finalScreen" class="screen">
+
+    <div class="final-content">
+
+        <div class="final-photo">
+
+            <img
+                src="images/8.jpg"
+                alt="Birthday"
+            >
+
+        </div>
+
+
+        <div class="final-text">
+
+            <p class="section-label">
+                FOR YOU
+            </p>
+
+            <h1>
+                Happy Birthday ❤️
+            </h1>
+
+            <p>
+
+                I hope your day is filled with
+                smiles, beautiful moments,
+                happiness and everything
+                that makes you happy.
+
+            </p>
+
+            <div class="big-heart">
+                ❤️
+            </div>
+
+            <p class="signature">
+                Made specially for you.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MUSIC
+===================================================== -->
+
+<audio
+    id="music"
+    loop
+>
+
+    <source
+        src="music/1.mp3"
+        type="audio/mpeg"
+    >
+
+</audio>
+
+
+<button
+    id="musicButton"
+    onclick="toggleMusic()"
+>
+
+    🎵
+
+</button>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+/* =========================================
+   PASSWORD
+========================================= */
+
+const PASSWORD = "nihal";
+
+let musicPlaying = false;
+
+const music = document.getElementById("music");
+
+
+function checkPassword() {
+
+    const entered =
+        document.getElementById("password").value.trim();
+
+    const error =
+        document.getElementById("wrongPassword");
+
+    if (entered === PASSWORD) {
+
+        error.textContent = "";
+
+        showScreen("welcomeScreen");
+
+        // Try to start music after user interaction
+        music.play()
+            .then(() => {
+
+                musicPlaying = true;
+
+                document.getElementById("musicButton")
+                    .textContent = "🔊";
+
+            })
+            .catch(() => {});
+
+    } else {
+
+        error.textContent =
+            "That's not the password ❤️";
+
+        document.getElementById("password").value = "";
+
+    }
+}
+
+
+/* ENTER KEY FOR PASSWORD */
+
+document
+    .getElementById("password")
+    .addEventListener("keydown", function(event) {
+
+        if (event.key === "Enter") {
+
+            checkPassword();
+
+        }
+
+    });
+
+
+/* =========================================
+   SCREEN SWITCHING
+========================================= */
+
+function showScreen(id) {
+
+    const screens =
+        document.querySelectorAll(".screen");
+
+    screens.forEach(screen => {
+
+        screen.classList.remove("active");
+
+    });
+
+    const target =
+        document.getElementById(id);
+
+    target.classList.add("active");
+
+}
+
+
+/* =========================================
+   MUSIC
+========================================= */
+
+function toggleMusic() {
+
+    if (musicPlaying) {
+
+        music.pause();
+
+        musicPlaying = false;
+
+        document.getElementById("musicButton")
+            .textContent = "🎵";
+
+    } else {
+
+        music.play();
+
+        musicPlaying = true;
+
+        document.getElementById("musicButton")
+            .textContent = "🔊";
+
+    }
+
+}
+
+
+/* =========================================
+   WHEEL
+========================================= */
+
+let wheelRotation = 0;
+
+let spinning = false;
+
+
+function spinWheel() {
+
+    if (spinning) return;
+
+    spinning = true;
+
+    const wheel =
+        document.getElementById("wheel");
+
+    const button =
+        document.getElementById("spinButton");
+
+    const result =
+        document.getElementById("wheelResult");
+
+    button.disabled = true;
+
+    result.textContent =
+        "Spinning... ✨";
+
+    /*
+       We specifically make the wheel
+       land on SARI.
+
+       Sari is segment #2.
+    */
+
+    const targetRotation = 990;
+
+    wheelRotation += targetRotation;
+
+    wheel.style.transform =
+        `rotate(${wheelRotation}deg)`;
+
+    setTimeout(() => {
+
+        result.textContent =
+            "Sari ❤️";
+
+        setTimeout(() => {
+
+            showScreen("sariScreen");
+
+            spinning = false;
+
+            button.disabled = false;
+
+        }, 1000);
+
+    }, 5000);
+
+}
+
+
+/* =========================================
+   KEYBOARD SHORTCUT
+========================================= */
+
+document.addEventListener("keydown", function(event) {
+
+    if (
+        event.key.toLowerCase() === "m"
+    ) {
+
+        toggleMusic();
+
+    }
+
+});

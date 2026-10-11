@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For You ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= PASSWORD ================= -->
+
+<section id="passwordScreen" class="screen active">
+
+    <div class="password-box">
+
+        <div class="lock">🔐</div>
+
+        <h1>A Little Surprise</h1>
+
+        <p>There is something special waiting for you...</p>
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Enter password"
+            autocomplete="off"
+        >
+
+        <button onclick="checkPassword()">
+            Unlock ❤️
+        </button>
+
+        <p id="wrongPassword"></p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WELCOME ================= -->
+
+<section id="welcomeScreen" class="screen">
+
+    <div class="welcome-content">
+
+        <div class="sparkle">✨</div>
+
+        <p class="small-title">THIS IS FOR YOU</p>
+
+        <h1>
+            Happy Birthday
+            <span>❤️</span>
+        </h1>
+
+        <p class="welcome-text">
+            Every picture has a memory.
+            <br>
+            And today, I want to show you some of them.
+        </p>
+
+        <button onclick="showScreen('photoScreen')">
+            Begin ✨
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PHOTO 1 ================= -->
+
+<section id="photoScreen" class="screen">
+
+    <div class="photo-stage">
+
+        <p class="section-label">A MEMORY</p>
+
+        <div class="main-photo">
+            <img src="images/1.jpg" alt="Memory">
+        </div>
+
+        <h2>One beautiful moment</h2>
+
+        <p>
+            Some moments become memories without us even realizing it.
+        </p>
+
+        <button onclick="showScreen('wheelScreen')">
+            There's more ❤️
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WHEEL ================= -->
+
+<section id="wheelScreen" class="screen">
+
+    <div class="wheel-page">
+
+        <p class="section-label">ONE MORE THING</p>
+
+        <h1>Which look should we see?</h1>
+
+        <p class="wheel-description">
+            Give the wheel a spin ✨
+        </p>
+
+        <div class="wheel-wrapper">
+
+            <div class="pointer">▼</div>
+
+            <div id="wheel" class="wheel">
+
+                <div class="wheel-item item1">
+                    <span>Smile</span>
+                </div>
+
+                <div class="wheel-item item2">
+                    <span>Sari</span>
+                </div>
+
+                <div class="wheel-item item3">
+                    <span>Beauty</span>
+                </div>
+
+                <div class="wheel-item item4">
+                    <span>Moment</span>
+                </div>
+
+                <div class="wheel-item item5">
+                    <span>Style</span>
+                </div>
+
+                <div class="wheel-item item6">
+                    <span>Memory</span>
+                </div>
+
+            </div>
+
+            <button id="spinButton" onclick="spinWheel()">
+                SPIN
+            </button>
+
+        </div>
+
+        <p id="wheelResult"></p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SARI PHOTO ================= -->
+
+<section id="sariScreen" class="screen">
+
+    <div class="reveal-container">
+
+        <div class="reveal-photo">
+
+            <img
+                src="images/2.jpg"
+                alt="Sari"
+            >
+
+        </div>
+
+        <div class="reveal-info">
+
+            <p class="section-label">THE WHEEL CHOSE</p>
+
+            <h1>Sari</h1>
+
+            <p>
+                And honestly...
+            </p>
+
+            <h2>
+                You look beautiful. ❤️
+            </h2>
+
+            <button onclick="showScreen('photosScreen')">
+                Continue ✨
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PHOTO COLLECTION ================= -->
+
+<section id="photosScreen" class="screen">
+
+    <div class="collection">
+
+        <p class="section-label">YOUR MOMENTS</p>
+
+        <h1>Little pieces of you ❤️</h1>
+
+        <div class="photo-grid">
+
+            <div class="small-photo">
+                <img src="images/3.jpg">
+            </div>
+
+            <div class="small-photo">
+                <img src="images/4.jpg">
+            </div>
+
+            <div class="small-photo">
+                <img src="images/5.jpg">
+            </div>
+
+            <div class="small-photo">
+                <img src="images/6.jpg">
+            </div>
+
+        </div>
+
+        <button onclick="showScreen('favoriteScreen')">
+            One last thing ❤️
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FAVORITE PHOTO ================= -->
+
+<section id="favoriteScreen" class="screen">
+
+    <div class="favorite">
+
+        <p class="section-label">MY FAVORITE</p>
+
+        <div class="favorite-photo">
+
+            <img src="images/7.jpg">
+
+        </div>
+
+        <h1>Simply you. ❤️</h1>
+
+        <p>
+            No filters. No words needed.
+            <br>
+            Just a beautiful memory.
+        </p>
+
+        <button onclick="showScreen('finalScreen')">
+            Open your surprise 💌
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FINAL ================= -->
+
+<section id="finalScreen" class="screen">
+
+    <div class="final-content">
+
+        <div class="final-photo">
+
+            <img src="images/8.jpg">
+
+        </div>
+
+        <div class="final-text">
+
+            <p class="section-label">FOR YOU</p>
+
+            <h1>
+                Happy Birthday ❤️
+            </h1>
+
+            <p>
+                I hope your day is filled with smiles,
+                beautiful moments and everything that
+                makes you happy.
+            </p>
+
+            <p class="big-heart">
+                ❤️
+            </p>
+
+            <p class="signature">
+                Made specially for you.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MUSIC ================= -->
+
+<audio id="music" loop>
+    <source src="music/1.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicButton" onclick="toggleMusic()">
+    🎵
+</button>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
