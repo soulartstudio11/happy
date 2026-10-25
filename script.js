@@ -2,7 +2,7 @@
    PASSWORD
 ===================================================== */
 
-const PASSWORD = "kattinihalliya";
+const PASSWORD = "nihaliya";
 
 const music =
     document.getElementById("music");
